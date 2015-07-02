@@ -2129,6 +2129,14 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
+        <!-- crDroid activities start -->
+        <receiver android:name="com.android.settings.crdroid.util.OnBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <!-- crDroid activities end -->
+
         <!-- CyanogenMod activities Start -->
         <activity android:name="Settings$ProfilesSettingsActivity"
                 android:label="@string/profile_settings"
@@ -2255,11 +2263,11 @@
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter android:priority="1">
                 <action android:name="android.app.action.START_ENCRYPTION" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.CryptKeeperSettings" />
